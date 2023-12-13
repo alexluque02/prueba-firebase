@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    color: #442C2E;
+}
+
+button {
+    color: white;
+}
+
+.addFriend {
+    float: right;
+    background-color: #89B9AD;
+}
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.8em;
+}
+
+.continue {
+    background-color: #C7DCA7;
+    font-size: 1.2em;
+}

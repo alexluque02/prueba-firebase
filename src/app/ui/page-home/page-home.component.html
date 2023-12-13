@@ -1,0 +1,88 @@
+<div class="container mt-5 text-center">
+    <h1>SORTEO DE AMIGO INVISIBLE POR EMAIL</h1>
+    <p>Sólo añade a tus amigos y nosotros nos encargamos de mandarles un correo informando a cada uno de su amigo
+        invisible asignado. <br>
+        <strong>¡Haz la temporada navideña aún más especial compartiendo momentos de sorpresas y
+            regalos!</strong>
+    </p>
+    <div class="row my-4 steps text-center">
+        <div class="col-md-4">
+            <p><strong><i class="bi bi-1-circle-fill"></i> ¡Llena el Tablero de Nombres y Correos!</strong><br>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <p><strong><i class="bi bi-2-circle-fill"></i> ¡Personaliza los mensajes que recibiréis!</strong></p>
+        </div>
+        <div class="col-md-4">
+            <p><strong>
+                    <i class="bi bi-3-circle-fill"></i>
+                    Revísalo todo y envía los mensajes
+                </strong></p>
+        </div>
+    </div>
+</div>
+<div class="container mt-2">
+
+    <div class="row">
+        <div class="col-md-10">
+
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn mx-2 addFriend" (click)="agregarAmigo()">Añadir
+                Amigo</button>
+        </div>
+    </div>
+
+    <form class="">
+
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <label class="form-label pt-3"><strong>ID</strong></label>
+            </div>
+            <div class="col-md-3 text-center">
+                <label class="form-label pt-3"><strong>Nombre</strong></label>
+            </div>
+            <div class="col-md-3 text-center">
+                <label class="form-label pt-3"><strong>Email</strong></label>
+            </div>
+            <div class="col-md-3 text-center">
+                <label class="form-label pt-3"><strong>No puede regalar a <i class="bi bi-question-circle-fill"></i>
+
+                    </strong></label>
+            </div>
+        </div>
+
+        <!-- Iterar para crear campos para personas -->
+        <div *ngFor="let amigo of amigos" class="p-2">
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="id{{amigo.id}}" readonly value="{{amigo.id}}">
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="nombre{{amigo.id}}" name="nombre[]" required>
+                </div>
+                <div class="col-md-3">
+                    <input type="email" class="form-control" id="email{{amigo.id}}" name="email[]" required>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" id="noPuedeRegalar{{amigo.id}}" name="noPuedeRegalar[]">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10">
+
+            </div>
+            <div class="col-md-2">
+                <button type="button" class="btn mx-2 addFriend" (click)="agregarAmigo()">Añadir
+                    Amigo</button>
+            </div>
+        </div>
+
+        <!-- Botón para enviar el formulario -->
+        <div class="row">
+            <button type="submit" class="btn mt-3 continue rounded-pill offset-1 col-10">Enviar</button>
+        </div>
+    </form>
+</div>
