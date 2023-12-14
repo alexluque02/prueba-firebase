@@ -22,3 +22,18 @@ h1 {
     background-color: #C7DCA7;
     font-size: 1.2em;
 }
+
+.friend {
+    text-decoration: underline;
+    color: #89B9AD;
+}
+
+@media only screen and (max-width: 767px) {
+    .descripcion {
+        font-size: 80%;
+    }
+
+    h1 {
+        font-size: 300%;
+    }
+}
